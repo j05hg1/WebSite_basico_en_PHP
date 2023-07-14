@@ -6,6 +6,10 @@
     <title>Curso de PHP 2023</title>
 </head>
 <body>
-    
+    <!-- <h1>Prueba</h1> -->
+    <h3>Registro de equipo</h3>
+    <form action="proccess.php" method="GET">
+
+    </form>
 </body>
 </html>
