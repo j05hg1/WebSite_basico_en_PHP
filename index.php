@@ -56,7 +56,8 @@
 <body>
     <!-- <h1>Prueba</h1> -->
     <h3>Registro de equipo</h3>
-    <form action="proccess.php" method="GET">
+    <!-- <form action="proccess.php" method="GET"> -->
+    <form action="proccess.php" method="POST">
         <label for="id">ID de usuario (invisible)</label>
         <input type="hidden" id="id" name="id" value="001"><br>
 
