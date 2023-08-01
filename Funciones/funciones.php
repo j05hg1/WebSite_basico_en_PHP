@@ -36,9 +36,13 @@ echo "\n".(saludarUsuario());
  * @return void
  */
 
- function cobrar($cantidad, $moneda = 'COP')
+ function cobrar(float $cantidad, string $moneda = 'COP')
  {
-   
+   return 'Hemos cobrado $' . number_format($cantidad, 2) . ' ' . $moneda;
  }
+
+ echo "\n".(cobrar(12000.50));
+ //cambiando el segundo parametro
+ echo "\n".(cobrar(12.50, 'USD'));
 
 ?>
