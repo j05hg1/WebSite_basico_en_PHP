@@ -1,1 +1,2 @@
-Archivo sin texto y sin formato.
+Hola soy el nuevo contenido del archivo de texto ^Y^.
+Contenido borrable.
