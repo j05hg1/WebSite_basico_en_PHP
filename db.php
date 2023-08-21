@@ -15,7 +15,11 @@ try {
     $password = "";
 
     // Para recibir excepciones en caso de errores
-    $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+    $options = 
+    [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+    ];
 
     // Nombre de origen de Base de Datos
     // Debe ser motor:host=host;dbname=nombre base de datos;charset=charset
@@ -28,7 +32,25 @@ try {
 
     echo "La conexión se realizó con éxito.";
 
+    //SQL a base de datos tabla productos
     $sentencia = $con->prepare("SELECT * FROM productos");
+    $sentencia->execute();
+    
+    // Muestra si trae datos de la tabla productos
+    $resultados = $sentencia->fetchAll();
+    // print_r($resultados);
+
+    // Mostrar resultados
+    if (empty($resultados)) {
+        echo "No hay productos en la base de datos.";
+    } else {
+        foreach ($resultados as $producto) {
+            echo sprintf("<h1>%s</h1>", $producto["nombre"]);
+            echo sprintf("<p>$%s</p>", $producto["precio"]);
+            echo $producto["oferta"] == 1 ? "En Oferta" : "No en Oferta" ;
+            echo sprintf("<p><b>%s</b></p>", date('d-M-Y H:i', strtotime($producto["creado"])));
+        }
+    }
 
 } catch (PDOException $e) {
     echo "Hubo un Error con la conexión: " . $e->getMessage();
