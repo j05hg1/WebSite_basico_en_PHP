@@ -1,3 +1,4 @@
+<?php require_once "config.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,6 +59,8 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4">
+                <?php echo mostrar_error(); ?>
+                <?php echo mostrar_mensaje(); ?>
                 <div class="card">
                     <!-- <h1>Prueba</h1> -->
                     <h3 class="card-header border-bottom-0">Registro de equipo</h3>
