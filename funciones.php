@@ -50,5 +50,3 @@ function mostrar_mensaje()
 
     return $html;
 }
-
-// INSERT INTO `equipos` (`id`, `gamertag`, `nombre`, `email`, `juego`, `miembros`, `url`, `color`, `creado`) VALUES (NULL, 'Moxtrip', 'John Doe', 'jslocal@locahost.com', 'Valorant', '5', '', 'ebebeb', current_timestamp());
