@@ -65,6 +65,7 @@
                     <!-- <h1>Prueba</h1> -->
                     <h3 class="card-header border-bottom-0">Registro de equipo</h3>
                     <div class="card-body">
+
                         <!-- <form action="proccess.php" method="GET"> -->
                         <form action="proccess.php" method="POST">
                             <!-- <div class="mb-3">
@@ -90,10 +91,9 @@
                             <div class="mb-3">                            
                                 <label class="form-label" for="juego">Selecciona un juego:</label>
                                 <select class="form-select" name="juego" id="juego">
-                                    <option value="Valorant">Valorant</option>
-                                    <option value="LoL">League of Legends</option>
-                                    <option value="WZ2">Warzone 2</option>
-                                    <option value="Overwatch2">OverWatch 2</option>
+                                    <?php foreach (cargar_juegos() as $juego): ?>
+                                        <option value="<?php echo $juego[0]; ?>"><?php echo $juego[1]; ?></option>                                        
+                                    <?php endforeach ?>
                                 </select>
                             </div>
     
@@ -115,6 +115,9 @@
                             <button class="btn btn-success" type="submit">Registrarse</button>
                             <buttom class="btn btn-danger" type="reset">Reiniciar</buttom>                    
                         </form>    
+                    </div>
+                    <div class="card-footer">
+                        <a href="equipos.php" class="btn btn-primary btn-sm">Ver equipos</a>
                     </div>
                 </div>
             </div>

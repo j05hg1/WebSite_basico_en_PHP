@@ -50,3 +50,21 @@ function mostrar_mensaje()
 
     return $html;
 }
+
+/**
+ * Regresa el array con los juegos disponibles
+ * 
+ * @return array
+ */
+
+function cargar_juegos()
+{
+    $juegos = [
+        ["Valorant", "Valorant"],
+        ["LoL", "League Of Legends"],
+        ["WZ2", "War Zone 2"],
+        ["MGO", "Metal Gear Online"],
+    ];
+
+    return $juegos;
+}
