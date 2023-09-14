@@ -96,7 +96,7 @@ try {
                             </div>
     
                             <button class="btn btn-success" type="submit">Guardar Cambios</button>
-                            <buttom class="btn btn-danger" type="reset">Cancelar</buttom>                    
+                            <button class="btn btn-danger" type="reset">Cancelar</button>                    
                         </form>    
                     </div>
                     <div class="card-footer">

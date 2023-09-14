@@ -113,7 +113,7 @@
                             </div>
     
                             <button class="btn btn-success" type="submit">Registrarse</button>
-                            <buttom class="btn btn-danger" type="reset">Reiniciar</buttom>                    
+                            <button class="btn btn-danger" type="reset">Reiniciar</button>                    
                         </form>    
                     </div>
                     <div class="card-footer">
